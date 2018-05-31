@@ -3,7 +3,7 @@ import {WorkDay} from "./work-day";
 export class Timesheet {
 
   private _startDate: Date;
-  private _week: WorkDay[7];
+  private _week: WorkDay[];
 
   get week(): any {
     return this._week;

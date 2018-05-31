@@ -1,16 +1,14 @@
 import {CodedEntity} from "./coded-entity";
-import {Project} from "./project";
 
 export class Task extends CodedEntity {
-
-  private _project: Project;
-
-  get project(): Project {
-    return this._project;
+  get projectCode(): string {
+    return this._projectCode;
   }
 
-  set project(value: Project) {
-    this._project = value;
+  set projectCode(value: string) {
+    this._projectCode = value;
   }
+
+  private _projectCode: string;
 
 }

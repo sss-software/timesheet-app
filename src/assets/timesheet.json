@@ -1,0 +1,83 @@
+{
+  "startDate": {
+    "day": 21,
+    "month": 5,
+    "year": 2018
+  },
+  "week": [
+    {
+      "startTime": {
+        "hour": 0,
+        "minute": 0
+      },
+      "endTime": {
+        "hour": 7,
+        "minute": 0
+      },
+      "date": {
+        "day": 21,
+        "month": 5,
+        "year": 2018
+      },
+      "entries": [
+        {
+          "time": 7.5,
+          "task": {
+            "code": "01.01",
+            "description": "Annual Leave",
+            "projectCode": "STRA00002"
+          }
+        }
+      ]
+    },
+    {
+      "startTime": {
+        "hour": 8,
+        "minute": 45
+      },
+      "endTime": {
+        "hour": 17,
+        "minute": 10
+      },
+      "date": {
+        "day": 22,
+        "month": 5,
+        "year": 2018
+      },
+      "entries": [
+        {
+          "time": 2,
+          "task": {
+            "code": "01.06",
+            "description": "Learning",
+            "projectCode": "STFA99999"
+          }
+        },
+        {
+          "time": 1.17,
+          "task": {
+            "code": "01.01",
+            "description": "Cal Unit",
+            "projectCode": "STFA00104"
+          }
+        },
+        {
+          "time": 4.75,
+          "task": {
+            "code": "01",
+            "description": "ALMA Design Study",
+            "projectCode": "STFA00142"
+          }
+        },
+        {
+          "time": -0.42,
+          "task": {
+            "code": "01.07.01",
+            "description": "Learning",
+            "projectCode": "STRA00001"
+          }
+        }
+      ]
+    }
+  ]
+}
