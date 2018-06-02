@@ -13,4 +13,16 @@ export class TimesheetService {
     return this.httpClient.get<Timesheet[]>('/assets/timesheet.json');
   }
 
+  getTimesheetByStartDate(date: any): Observable<Timesheet> {
+    console.log(date);
+    this.getTimesheets().subscribe((result: Timesheet[]) => {
+      result.forEach((timesheet: Timesheet) => {
+        if (timesheet.startDate === date) {
+          return timesheet;
+        }
+      });
+    });
+    return null;
+  }
+
 }

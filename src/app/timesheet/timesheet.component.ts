@@ -13,7 +13,8 @@ export class TimesheetComponent implements OnInit {
   constructor(private timesheetService: TimesheetService) { }
 
   ngOnInit() {
-    this.timesheetService.getTimesheets().subscribe(result => {
+    const date = {year: 2018, month: 4, day: 21};
+    this.timesheetService.getTimesheetByStartDate(date).subscribe(result => {
       console.log(result);
     })
   }
