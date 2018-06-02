@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TimesheetService} from "./timesheet.service";
 
 @Component({
   selector: 'app-timesheet',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimesheetComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private timesheetService: TimesheetService) { }
 
   ngOnInit() {
+    this.timesheetService.getTimesheets().subscribe(result => {
+      console.log(result);
+    })
   }
 
 }
