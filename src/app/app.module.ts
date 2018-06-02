@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {SharedModule} from "./shared/shared.module";
-import {TimesheetService} from "./shared/services/timesheet.service";
+import {TimesheetService} from "./timesheet/timesheet.service";
+import {TimesheetModule} from "./timesheet/timesheet.module";
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import {TimesheetService} from "./shared/services/timesheet.service";
   ],
   imports: [
     BrowserModule,
+    TimesheetModule,
     SharedModule
   ],
-  providers: [TimesheetService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

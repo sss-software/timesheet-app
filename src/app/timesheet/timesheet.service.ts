@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Timesheet} from "../model/timesheet";
+import {Timesheet} from "../shared/model/timesheet";
 import {Observable} from "rxjs/internal/Observable";
 
 @Injectable()
