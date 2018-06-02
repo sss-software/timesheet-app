@@ -9,10 +9,11 @@ import {TimesheetService} from "./shared/services/timesheet.service";
 export class AppComponent implements OnInit{
   title = 'app';
 
-  constructor(private timsheetService: TimesheetService) {
+  constructor(private timesheetService: TimesheetService) {
 
   }
 
   ngOnInit(): void {
+    this.timesheetService.getTimesheets().subscribe(result => console.log(result));
   }
 }

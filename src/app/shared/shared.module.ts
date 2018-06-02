@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {TimesheetService} from "./services/timesheet.service";
-import {HttpModule} from "@angular/http";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    HttpClientModule
   ],
   declarations: [
   ],
