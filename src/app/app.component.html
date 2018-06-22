@@ -3,7 +3,11 @@
     Timesheets
   </div>
   <div class="item">
-    <button class="ui blue button" suiDatepicker [pickerMode]="'date'">Load Timesheet</button>
+    <button class="ui blue button"
+            suiDatepicker
+            [pickerMode]="'date'"
+            (pickerSelectedDateChange)="loadTimesheet($event)">Load Timesheet
+    </button>
   </div>
 </div>
 <div style="height: 4em"></div>

@@ -13,7 +13,7 @@ export class AppComponent{
 
   }
 
-  loadTimesheet() {
-    this.timesheetService.loadCurrentTimesheet('Mon May 21 2018 00:00:00');
+  loadTimesheet(event: string) {
+    this.timesheetService.loadCurrentTimesheet(new Date(event));
   }
 }

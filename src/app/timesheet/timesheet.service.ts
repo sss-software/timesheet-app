@@ -19,9 +19,9 @@ export class TimesheetService {
     return this._currentTimesheet;
   }
 
-  loadCurrentTimesheet(date: string) {
+  loadCurrentTimesheet(date: Date) {
     for (let timesheet: Timesheet of this._timesheets.getValue()) {
-      if (timesheet.startDate.toISOString() === new Date(date).toISOString()) {
+      if (timesheet.startDate.toISOString() === date.toISOString()) {
         this._currentTimesheet.next(timesheet);
       }
     }
