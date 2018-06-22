@@ -4,6 +4,7 @@ import {Task} from "../shared/model/task";
 import {TimeEntry} from "../shared/model/time-entry";
 import {WorkDay} from "../shared/model/work-day";
 import {TimesheetService} from "./timesheet.service";
+import {log} from "util";
 
 @Component({
   selector: 'app-timesheet',
@@ -13,8 +14,6 @@ import {TimesheetService} from "./timesheet.service";
 export class TimesheetComponent implements OnInit {
 
   form: FormGroup;
-
-  private _projectTaskSet: Set<Task>;
 
   constructor(private timesheetService: TimesheetService,
               private formBuilder: FormBuilder) {
