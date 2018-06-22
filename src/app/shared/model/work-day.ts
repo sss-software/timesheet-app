@@ -1,27 +1,38 @@
-import {Time} from "./time";
 import {TimeEntry} from "./time-entry";
 
 export class WorkDay {
 
-  private _startTime: Time;
-  private _endTime: Time;
+  private _startTime: Date;
+  private _endTime: Date;
   private _date: Date;
   private _entries: TimeEntry[];
 
+  constructor(obj: WorkDay = {} as WorkDay) {
+    let {
+      startTime = null,
+      endTime = null,
+      date = null,
+      entries = []
+    } = obj;
+    this._startTime = new Date(startTime);
+    this._endTime = new Date(endTime);
+    this._date = new Date(date);
+    this._entries = entries.map(timeEntry => new TimeEntry(timeEntry));
+  }
 
-  get startTime(): Time {
+  get startTime(): Date {
     return this._startTime;
   }
 
-  set startTime(value: Time) {
+  set startTime(value: Date) {
     this._startTime = value;
   }
 
-  get endTime(): Time {
+  get endTime(): Date {
     return this._endTime;
   }
 
-  set endTime(value: Time) {
+  set endTime(value: Date) {
     this._endTime = value;
   }
 

@@ -1,17 +1,26 @@
+import {Duration} from "./duration";
 import {Task} from "./task";
-import {Time} from "./time";
 
 export class TimeEntry {
 
-  private _time: Time;
+  private _duration: Duration;
   private _task: Task;
 
-  get time(): Time {
-    return this._time;
+  constructor(obj: TimeEntry = {} as TimeEntry) {
+    let {
+      task = null,
+      duration = null
+    } = obj;
+    this._task = new Task(task);
+    this._duration = new Duration(duration);
   }
 
-  set time(value: Time) {
-    this._time = value;
+  get duration(): Duration {
+    return this._duration;
+  }
+
+  set duration(value: Duration) {
+    this._duration = value;
   }
 
   get task(): Task {

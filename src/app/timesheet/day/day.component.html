@@ -1,25 +1,49 @@
-<form class="ui form">
+<div class="ui form segment" [formGroup]="form">
   <!-- Date -->
-  <div class="ui dividing header">21st May 2018</div>
-  <!-- Start time -->
-  <div class="field">
-    <label>Start Time</label>
-    <input>
-  </div>
-  <!-- End time -->
-  <div class="field">
-    <label>End Time</label>
-    <input>
+  <div class="ui dividing header">{{form.getRawValue()._date | date}}</div>
+  <div class="two fields">
+    <!-- Start time -->
+    <div class="field">
+      <label for="input-start-time">Start Time</label>
+      <div class="ui left icon input">
+        <i class="clock icon"></i>
+        <input id="input-start-time"
+               formControlName="_startTime"
+               suiDatepicker
+               [pickerMode]="'time'">
+      </div>
+    </div>
+    <!-- End time -->
+    <div class="field">
+      <label for="input-end-time">End Time</label>
+      <div class="ui left icon input">
+        <i class="clock icon"></i>
+        <input id="input-end-time"
+               formControlName="_endTime"
+               suiDatepicker
+               [pickerMode]="'time'">
+      </div>
+    </div>
   </div>
   <!-- Array header -->
   <!-- Time entry array -->
-  <div class="two fields">
-    <div class="field">
-      <input>
-    </div>
-    <div class="field">
-      <input>
+  <div formArrayName="_entries">
+    <div *ngFor="let entry of entries.controls; let i = index" [formGroupName]="i">
+      <div class="three fields">
+        <div class="field" formGroupName="_task">
+          <label *ngIf="i === 0">Project</label>
+          <input formControlName="_projectCode">
+        </div>
+        <div class="field" formGroupName="_task">
+          <label *ngIf="i === 0">Task</label>
+          <input formControlName="_code">
+        </div>
+        <div class="field" formGroupName="_duration">
+          <label *ngIf="i === 0">Duration</label>
+          <input formControlName="_decimal">
+        </div>
+      </div>
     </div>
   </div>
   <!-- Totals -->
-</form>
+</div>

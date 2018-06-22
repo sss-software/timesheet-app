@@ -1,7 +1,10 @@
-<app-day></app-day>
-<app-day></app-day>
-<app-day></app-day>
-<app-day></app-day>
-<app-day></app-day>
-<app-day></app-day>
-<app-day></app-day>
+<div class="ui grid"
+     [formGroup]="form">
+  <div class="row" formArrayName="week">
+    <div *ngFor="let day of week.controls; let i = index" [formGroupName]="i">
+      <div class="column">
+        <app-day [form]="day"></app-day>
+      </div>
+    </div>
+  </div>
+</div>
