@@ -1,0 +1,172 @@
+[
+  {
+    "startDate": "Mon May 21 2018 00:00:00",
+    "week": [
+      {
+        "startTime": "Mon May 21 2018 00:00:00",
+        "endTime": "Mon May 21 2018 08:00:00",
+        "date": "Mon May 21 2018 00:00:00",
+        "entries": [
+          {
+            "duration": {
+              "decimal": 7.5
+            },
+            "task": {
+              "code": "01.01",
+              "description": "Annual Leave",
+              "projectCode": "STRA00002"
+            }
+          }
+        ]
+      },
+      {
+        "startTime": "Mon May 22 2018 08:45:00",
+        "endTime": "Mon May 22 2018 17:10:00",
+        "date": "Mon May 22 2018 00:00:00",
+        "entries": [
+          {
+            "duration": {
+              "decimal": 2
+            },
+            "task": {
+              "code": "01.06",
+              "description": "Learning",
+              "projectCode": "STFA99999"
+            }
+          },
+          {
+            "duration": {
+              "decimal": 1.17
+            },
+            "task": {
+              "code": "01.01",
+              "description": "Cal Unit",
+              "projectCode": "STFA00104"
+            }
+          },
+          {
+            "duration": {
+              "decimal": 4.75
+            },
+            "task": {
+              "code": "01",
+              "description": "ALMA Design Study",
+              "projectCode": "STFA00142"
+            }
+          },
+          {
+            "duration": {
+              "decimal": -0.42
+            },
+            "task": {
+              "code": "01.07.01",
+              "description": "Learning",
+              "projectCode": "STRA00001"
+            }
+          }
+        ]
+      },
+      {
+        "startTime": "Wed May 23 2018 08:10:00",
+        "endTime": "Wed May 23 2018 15:25:00",
+        "date": "Wed May 23 2018 00:00:00",
+        "entries": [
+          {
+            "duration": {
+              "decimal": 6.75
+            },
+            "task": {
+              "code": "01",
+              "description": "ALMA Design Study",
+              "projectCode": "STFA00142"
+            }
+          },
+          {
+            "duration": {
+              "decimal": 0.75
+            },
+            "task": {
+              "code": "01.07.02",
+              "description": "Flexi used",
+              "projectCode": "STRA00001"
+            }
+          }
+        ]
+      },
+      {
+        "startTime": "Thu May 24 2018 08:35:00",
+        "endTime": "Thu May 24 2018 17:35:00",
+        "date": "Thu May 24 2018 00:00:00",
+        "entries": [
+          {
+            "duration": {
+              "decimal": 2.00
+            },
+            "task": {
+              "code": "01.06",
+              "description": "Learning",
+              "projectCode": "STFA99999"
+            }
+          },
+          {
+            "duration": {
+              "decimal": 1.00
+            },
+            "task": {
+              "code": "01.01",
+              "description": "MOONS Calibration Unit",
+              "projectCode": "STFA00104"
+            }
+          },
+          {
+            "duration": {
+              "decimal": 5.50
+            },
+            "task": {
+              "code": "01",
+              "description": "ALMA Design Study",
+              "projectCode": "STFA00142"
+            }
+          },
+          {
+            "duration": {
+              "decimal": -1.00
+            },
+            "task": {
+              "code": "01.07.01",
+              "description": "Flexi Earned",
+              "projectCode": "STRA00001"
+            }
+          }
+        ]
+      },
+      {
+        "startTime": "Fri May 25 2018 07:30:00",
+        "endTime": "Fri May 25 2018 15:30:00",
+        "date": "Fri May 25 2018 00:00:00",
+        "entries": [
+          {
+            "duration": {
+              "decimal": 2.00
+            },
+            "task": {
+              "code": "01.06",
+              "description": "Learning",
+              "projectCode": "STFA99999"
+            }
+          },
+          {
+            "duration": {
+              "decimal": 5.50
+            },
+            "task": {
+              "code": "01",
+              "description": "ALMA Design Study",
+              "projectCode": "STRA00142"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
