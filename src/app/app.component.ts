@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {TimesheetService} from "./timesheet/timesheet.service";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,11 @@ import {Component} from '@angular/core';
 export class AppComponent{
   title = 'app';
 
-  constructor() {
+  constructor(private timesheetService: TimesheetService) {
 
+  }
+
+  loadTimesheet() {
+    this.timesheetService.loadCurrentTimesheet('Mon May 21 2018 00:00:00');
   }
 }

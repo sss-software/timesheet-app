@@ -24,10 +24,10 @@ export class TimesheetComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.timesheetService.timesheets.subscribe(result => {
-      if (result[0]) {
-        this.form.patchValue(result[0]);
-        this.setDays(result[0].week);
+    this.timesheetService.currentTimesheet.subscribe(result => {
+      if (result) {
+        this.form.patchValue(result);
+        this.setDays(result.week);
       }
     });
     this.observeFormChanges();

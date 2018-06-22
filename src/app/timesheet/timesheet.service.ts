@@ -1,10 +1,7 @@
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
-import {Task} from "../shared/model/task";
-import {TimeEntry} from "../shared/model/time-entry";
 import {Timesheet} from "../shared/model/timesheet";
-import {WorkDay} from "../shared/model/work-day";
 
 @Injectable()
 export class TimesheetService {
@@ -20,6 +17,14 @@ export class TimesheetService {
 
   get currentTimesheet(): BehaviorSubject<Timesheet> {
     return this._currentTimesheet;
+  }
+
+  loadCurrentTimesheet(date: string) {
+    for (let timesheet: Timesheet of this._timesheets.getValue()) {
+      if (timesheet.startDate.toISOString() === new Date(date).toISOString()) {
+        this._currentTimesheet.next(timesheet);
+      }
+    }
   }
 
   get timesheets(): BehaviorSubject<Timesheet[]> {
